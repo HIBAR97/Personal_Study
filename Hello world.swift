@@ -28,3 +28,7 @@ print("Status \(Code) message \(Message)")
 let (justCode, _) = httpError
 print("Status \(justCode)")
 
+//변수를 모를 경우 nil로 임시 설정가능 위 아래는 같은 문장
+var Answer: nil
+var Answer2: String?
+
