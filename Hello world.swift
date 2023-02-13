@@ -32,3 +32,17 @@ print("Status \(justCode)")
 var Answer: nil
 var Answer2: String?
 
+//문자열 캐릭터 작업
+for character in "Dog"{
+    print(character)
+    //D
+    //o
+    //g
+}
+
+//문자열 값 개수를 검색 가능
+let unusualArr = "Koala, Snail, Penguin"
+print("unusual has \(unusualArr.cout) characters")
+//문자열 갯수를 출력
+
+
