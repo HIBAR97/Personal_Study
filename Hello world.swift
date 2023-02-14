@@ -42,7 +42,14 @@ for character in "Dog"{
 
 //문자열 값 개수를 검색 가능
 let unusualArr = "Koala, Snail, Penguin"
-print("unusual has \(unusualArr.cout) characters")
-//문자열 갯수를 출력
+print("unusual has \(unusualArr.count) characters")
+//문자열 갯수를 출력 (.count)로 개수 파악 가능
 
+//문자열 접근
+let greeting = "Hello World"
+greeting[greeting.startIndex]
+greeting[greeting.index(befor: greeting.endIndex)]
+greeting[greeting.index(after: greeting.startIndex)]
 
+//offsetBy로 몇 번째 선택가능
+greeting[greeting.index(greeting.stratIndex, offsetBy: 7)]
