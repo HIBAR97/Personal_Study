@@ -53,3 +53,15 @@ greeting[greeting.index(after: greeting.startIndex)]
 
 //offsetBy로 몇 번째 선택가능
 greeting[greeting.index(greeting.stratIndex, offsetBy: 7)]
+
+//연속 모든 문자 인댁스 접근
+for index in greeting.indices{
+    print("\(greeting[index])".terminator:"")
+} //terminator = 중간중간 띄어 쓰기?
+
+//문자열 삽입
+var welcome = "hello"
+welcome.insert("!", at: welcome.endIndex)
+//문장형 삽입
+welcome.insert(contentsOf: " there", at: welcome.index(before:welcome.endIndex))
+
