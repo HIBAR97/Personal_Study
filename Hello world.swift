@@ -65,3 +65,12 @@ welcome.insert("!", at: welcome.endIndex)
 //문장형 삽입
 welcome.insert(contentsOf: " there", at: welcome.index(before:welcome.endIndex))
 
+//삭제도 가능
+//문자형
+welcome.remove(at: welcome.index(before: welcome.endIndex))
+//문장형
+welcome.remove(at: welcome.index(welcome.endIndex, offsetBy: -6)..< welcome.endIndex)
+
+//경우에 따라 intsert(_: at:), insert(contentsOf:at:)사용가능
+
+//인스턴스 하위 문자열 (메모리 사용 적게)
