@@ -74,3 +74,10 @@ welcome.remove(at: welcome.index(welcome.endIndex, offsetBy: -6)..< welcome.endI
 //경우에 따라 intsert(_: at:), insert(contentsOf:at:)사용가능
 
 //인스턴스 하위 문자열 (메모리 사용 적게)
+let beginning = greeting[..<greeting.firstIndex(of:"h") ?? greeting.endIndex] //hello
+let newString = String(beginning)
+
+//newString은 greeting에서 메모리를 접근하기 때문에 추가적인 메모리를 사용하지 않고 변수 사용가능
+
+//문자열 비교
+
