@@ -99,4 +99,4 @@ someInts.append(3)
 //기본값 배열 만들기
 var threeDoubles = Array(rapeating: 0.0, count: 3) //값은 0.0 3개가 추가 전체는 Double
 
-
+//arr 두개 추가
