@@ -88,3 +88,15 @@ for i in arr{
         count += 1
     }
 }
+
+//배열, 셑, 사전 3가지 사용
+//arr 만들기
+var someInts: [Int] = []
+
+//arr 값 넣기
+someInts.append(3)
+
+//기본값 배열 만들기
+var threeDoubles = Array(rapeating: 0.0, count: 3) //값은 0.0 3개가 추가 전체는 Double
+
+
