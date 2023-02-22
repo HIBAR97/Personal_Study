@@ -92,6 +92,7 @@ for i in arr{
 //배열, 셑, 사전 3가지 사용
 //arr 만들기
 var someInts: [Int] = []
+var someInts = [] //로 생략가능
 
 //arr 값 넣기
 someInts.append(3)
@@ -99,4 +100,12 @@ someInts.append(3)
 //기본값 배열 만들기
 var threeDoubles = Array(rapeating: 0.0, count: 3) //값은 0.0 3개가 추가 전체는 Double
 
-//arr 두개 추가
+//.count로 갯수, .isEmpty로 비어있는지, .append로 추가, +=로 배열 합체
+
+var shoppingList[4..6] = ["Banana","Apple"]//로 추가가능
+shoppingList.insert("Maple Syrup", at: 0)//를 사용해 중간 추가 가능
+
+//arr 삭제
+shoppingList.remove(at:0)
+
+
