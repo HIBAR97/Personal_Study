@@ -107,5 +107,13 @@ shoppingList.insert("Maple Syrup", at: 0)//를 사용해 중간 추가 가능
 
 //arr 삭제
 shoppingList.remove(at:0)
+shoppingList.removeLast()
 
+//arr 한개씩 접근
+for (idx, val) in shoppingList.enumerated(){
+    print("Item \(idx + 1) : \(val)")
+}
 
+//세트 Set
+var letters = Set<Character>() //세트 생성
+letters.insert("a")
