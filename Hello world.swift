@@ -117,3 +117,5 @@ for (idx, val) in shoppingList.enumerated(){
 //세트 Set
 var letters = Set<Character>() //세트 생성
 letters.insert("a")
+
+var 
