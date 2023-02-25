@@ -118,4 +118,12 @@ for (idx, val) in shoppingList.enumerated(){
 var letters = Set<Character>() //세트 생성
 letters.insert("a")
 
-var 
+var favoriteGenres: Set = ["Rock", "Classical", "Hip Hop"]
+//count, isEmpty, insert, remove는 그대로 사용가능
+
+//특정 값이 포함되는지 확인
+if favoriteGenres.contains("Funk"){
+    print("1")
+}else{
+    print("0")
+}
