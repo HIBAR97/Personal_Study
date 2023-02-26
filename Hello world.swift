@@ -127,3 +127,12 @@ if favoriteGenres.contains("Funk"){
 }else{
     print("0")
 }
+
+//set도 반복 가능
+for i in favoriteGenres{
+    print("\(i)")
+}
+
+for j in favoriteGenres.sorted(){
+    print("\(j)")
+}
