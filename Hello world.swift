@@ -136,3 +136,11 @@ for i in favoriteGenres{
 for j in favoriteGenres.sorted(){
     print("\(j)")
 }
+
+//set는 집합처럼 사용가능
+//집합 작업
+let oddDigits: Set = [1,3,5,7]
+let evenDigits: Set = [0,2,4,6,8]
+let singleDigit: Set = [2,3,5,7]
+
+//short를 통해 쇼팅가능
