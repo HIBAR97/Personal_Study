@@ -144,3 +144,5 @@ let evenDigits: Set = [0,2,4,6,8]
 let singleDigit: Set = [2,3,5,7]
 
 //short를 통해 쇼팅가능
+//union == 합집합
+oddDigits.union(evenDigits).sorted()
