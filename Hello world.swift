@@ -151,5 +151,12 @@ oddDigits.union(evenDigits).sorted()
 //intersection == 교집합
 oddDigits.intersection(evenDigits).sorted()
 
-//symmeyricDifferece == 여집합
+//symmeyricDifferece == 여집합 + 여집합
 oddDigits.symmeyricDifferece(evenDigits).sorted()
+
+//subtracing == 여집합
+oddDigits.subtracing(evenDigits).sorted()
+
+//집합관계는 전부 bool값으로 표현
+
+//사전
