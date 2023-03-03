@@ -159,4 +159,12 @@ oddDigits.subtracing(evenDigits).sorted()
 
 //집합관계는 전부 bool값으로 표현
 
-//사전
+//사전 서로다른 타입의 정보를 저장 가능
+var nameOfInt: [Int: String] = [:]
+nameOfInt[16] = "sixteen"
+
+//사전 정보 삽입 가능
+var airports: [String: String] = ["YYX" : "Korea", "JP" : "Japan"]
+
+//사전 정보 접근
+
