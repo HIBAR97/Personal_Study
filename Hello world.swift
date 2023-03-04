@@ -167,4 +167,15 @@ nameOfInt[16] = "sixteen"
 var airports: [String: String] = ["YYX" : "Korea", "JP" : "Japan"]
 
 //사전 정보 접근
+//count, isEmpty 사용가능
+print("\(airports.count)")
+
+//새항목 추가
+airports["LHR"] = "London"
+//특정키 변경
+airports["LHR"] = "London Heathrow"
+
+//해당키 삭제 nil사용 혹은 removeValue 사용
+airports["APL"] = nil
+if let removeValue = airports.removeValue(forKey: "DUB")
 
