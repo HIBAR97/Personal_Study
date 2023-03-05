@@ -179,3 +179,15 @@ airports["LHR"] = "London Heathrow"
 airports["APL"] = nil
 if let removeValue = airports.removeValue(forKey: "DUB")
 
+//사전 반복 + 각각 튜플 접근
+for (airportCode, airportName) in airports{
+    print("\(airportCode) : \(airportName)")
+}
+
+for airportCode in airports.keys{
+    print("\(airportCode)")
+}
+
+for airportCode in airports.values {
+    print("\(airportName)")
+}
