@@ -191,3 +191,10 @@ for airportCode in airports.keys{
 for airportCode in airports.values {
     print("\(airportName)")
 }
+
+//사전의 값을 임의의 데이터 값으로 변경해서 출력 가능
+let airportCodes = [String](airports.keys)
+let aorportNames = [String](airports.values)
+
+//제어문
+
