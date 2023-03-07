@@ -197,4 +197,17 @@ let airportCodes = [String](airports.keys)
 let aorportNames = [String](airports.values)
 
 //제어문
+let names = ["Andy", "Alex", "Brian", " Jack"]
+for name in names { //name은 변수로 할당할 수 있다.
+    print("Hello, \(name)!")
+}
 
+//제어문 사전 접근
+let numberOfLegs = {"spider" : 8, "ant" : 6, "Cat" : 4}
+for (animalName, legCount) in numberOfLegs { //두개의 변수를 선언 -> 앞이 count 뒤가 velue로 자동할당
+    print("\(animalName)s have \(legCount)" legs)
+}
+
+for index in 1..5{ //rlqhswjrdls qksqhrans
+    print("\(index)")
+}
