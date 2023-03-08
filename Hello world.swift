@@ -208,6 +208,30 @@ for (animalName, legCount) in numberOfLegs { //두개의 변수를 선언 -> 앞
     print("\(animalName)s have \(legCount)" legs)
 }
 
-for index in 1..5{ //rlqhswjrdls qksqhrans
+for index in 1..5{ //기존방식도 그대로 사용가능
     print("\(index)")
 }
+
+//특정 범위를 특정 조건에 따라 사용가능
+let minuteInterval = 5
+for tickMark in stride(from: 0, to: 60, by: minuteInterval){
+    //0..60까지 5단위로 출력 (0,5,10,15,20..)
+}
+
+//while 루프 기존이랑 같음
+var square = 0
+var diceRoll = 0
+while square < finalSquare {
+    diceRoll += 1
+    if diceRoll == 7 {
+        diceRoll = 1
+    }
+    square += diceRoll
+    if square < board.count{
+        square += board[square]
+    }
+}
+print("Game over")
+
+//repeat을 통해서 비슷하게 사용가능
+
