@@ -234,4 +234,16 @@ while square < finalSquare {
 print("Game over")
 
 //repeat을 통해서 비슷하게 사용가능
+repeat {
+    square += board[square]
+    diceRoll += 1
+    
+    if diceRoll == 7
+        diceRoll = 1
+        
+    square += diceRoll
+}while square < finalSquare
+//위에랑 같지만 while문이 아래 있고 일단 한번 실행함
+
+//if 조건문
 
