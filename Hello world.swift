@@ -245,5 +245,20 @@ repeat {
 }while square < finalSquare
 //위에랑 같지만 while문이 아래 있고 일단 한번 실행함
 
-//if 조건문
+//if 조건문은 기존과 똑같음
 
+//switch문
+switch Num {
+case 1:
+    print("1")
+case 2:
+    print("2")
+    
+default:
+    print("Number")
+}
+
+//case에 코드가 없을경우에는 런타임 에러를 출력
+//case는 범위도 가능
+
+//튜플
