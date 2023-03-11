@@ -261,4 +261,21 @@ default:
 //case에 코드가 없을경우에는 런타임 에러를 출력
 //case는 범위도 가능
 
-//튜플
+//튜플 형태
+let somePoint = (1,1)
+switch somePoint {
+case (0,0):
+    print("0,0")
+
+case (_,0): //범위를 모를경우 _로 대체가능
+    print("X,0")
+    
+case (0,_) :
+    print("0,X")
+    
+case (-2...2, -2...2): //범위를 선택가능
+    print("-2,2")
+}
+
+//값을 바인딩
+
