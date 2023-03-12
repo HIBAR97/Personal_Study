@@ -248,6 +248,7 @@ repeat {
 //if 조건문은 기존과 똑같음
 
 //switch문
+//case 조건은 여러개도 가능
 switch Num {
 case 1:
     print("1")
@@ -278,4 +279,31 @@ case (-2...2, -2...2): //범위를 선택가능
 }
 
 //값을 바인딩
+let anotherPoint = (2,0)
+switch anotherPoint {
+case (let x, 0):
+    print("\(x)")
 
+case (0, let y):
+    print("\(y)")
+    
+case let (x,y):
+    print("\(x), \(y)")
+}
+
+//where문
+switch anotherPoint {
+case let (x,y) where x == y:
+    print ("\(x), \(y) is x == y")
+}
+//case문에 속해져있는 if절 느낌
+
+//제어문 5가지
+//continue, break, fallthrough, return, throw
+
+//continue -> 수행중인 루프를 중지하고 다음 루프를 실행합니다.
+//break -> 전체 제어 흐름 명령문을 즉시 종료합니다.
+//fallthrough -> case문에서 여러 사례를 실행하는 것을 방지하고 사용할경우 명시적으로 써야함
+//throw ->
+
+//함수 선언
