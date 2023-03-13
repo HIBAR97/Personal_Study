@@ -307,3 +307,9 @@ case let (x,y) where x == y:
 //throw ->
 
 //함수 선언
+func greet(person: String) -> String {
+    let greeting = "Hello, " + person + "!"
+    return greeting
+}//person은 함수 내부의 변수 String으로 선언, String으로 출력
+
+print(greet(person: "Anna"))
