@@ -313,3 +313,10 @@ func greet(person: String) -> String {
 }//person은 함수 내부의 변수 String으로 선언, String으로 출력
 
 print(greet(person: "Anna"))
+
+//변수 없는 함수
+func sayHelloWorld() -> String(){
+return “hello, world”
+}
+
+print(sayHelloWorld())
