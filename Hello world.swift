@@ -320,3 +320,12 @@ return “hello, world”
 }
 
 print(sayHelloWorld())
+
+//여러 매개변수가 있는 함수
+func greet(person : String, alreadyGreeted: Bool) -> String{
+if alreadyGreeted{
+	return greetAgain(person: person)
+	}else {
+		return greet(person: person
+	}
+}
