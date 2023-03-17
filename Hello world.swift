@@ -329,4 +329,4 @@ if alreadyGreeted{
 		return greet(person: person
 	}
 }
-//매개변수 없는 함수
+//여러 매개변수가 있는 함수
