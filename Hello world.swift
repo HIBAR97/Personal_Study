@@ -329,4 +329,9 @@ if alreadyGreeted{
 		return greet(person: person
 	}
 }
-//여러 매개변수가 있는 함수
+//반환 값이 없는 함수
+func greet(person: String){
+	print(\(person)
+}
+greet(person: “Dave”)
+
