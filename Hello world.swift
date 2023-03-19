@@ -335,3 +335,11 @@ func greet(person: String){
 }
 greet(person: “Dave”)
 
+//함수의 반환 값은 호출될때 무시할 수 있음
+func printAndCount(string: String) -> Int{
+	print(string)
+	retutn string.count
+}
+
+printAndCount(string: “Hello world”)
+//hello world는 프린트 되고 count는 반환만됨 출력X
