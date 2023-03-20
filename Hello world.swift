@@ -343,3 +343,22 @@ func printAndCount(string: String) -> Int{
 
 printAndCount(string: “Hello world”)
 //hello world는 프린트 되고 count는 반환만됨 출력X
+
+//반환 값이 여러 개인 함수
+func minMax(array: [Int] -> (min: Int, max: Int){
+	var currentMin = array[0]
+	var currentMax = array[0\]
+	for value in array[1..< array.count] {
+	if value < currentMin {
+			currentMin = value
+		}else if value > currentMax {
+			currentMax = value
+		}
+	}
+	return (currentMin, currentMax)
+} //return 값이 2개 이상 
+// 반환값의 이름을 정해두었기 때문에 이름으로 접근가능
+
+let bounds = minMax(array: [8,-6,2,6,-2])
+print(“min is \(bounds.min) and max is \(bounds.max)”)
+//변수선언후 .(이름)으로 접근 가능
