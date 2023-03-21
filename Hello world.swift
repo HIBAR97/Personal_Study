@@ -362,3 +362,20 @@ func minMax(array: [Int] -> (min: Int, max: Int){
 let bounds = minMax(array: [8,-6,2,6,-2])
 print(“min is \(bounds.min) and max is \(bounds.max)”)
 //변수선언후 .(이름)으로 접근 가능
+
+//선택적 튜플 반환 유형
+//반환되는 유형 전체 튜플에 값이 없을 가능성이 있을때 선택적으로 가능
+func minMax(arr: [Int]) -> (min: Int, max: Int)?{
+if array.isEmpty { return nil }
+    var currentMin = array[0]
+    var currentMax = array[0]
+    for value in array[1..<array.count] {
+        if value < currentMin {
+            currentMin = value
+        } else if value > currentMax {
+            currentMax = value
+        }
+    }
+    return (currentMin, currentMax)
+}
+// 위에서 “?”를 통해 반환값 불확실성을 작성
