@@ -379,3 +379,12 @@ if array.isEmpty { return nil }
     return (currentMin, currentMax)
 }
 // 위에서 “?”를 통해 반환값 불확실성을 작성
+
+//암시적 반환이 있는 함수
+func greeting(for person: String) -> String {
+    "Hello, " + person + "!"
+}//일반적인 함수
+
+func anotherGreeting(for person: String) -> String {
+    return "Hello, " + person + "!"
+}//return의 함수를 사용하여 암시적으로 반환값이 있는 함수
