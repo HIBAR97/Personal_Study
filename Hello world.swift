@@ -388,3 +388,13 @@ func greeting(for person: String) -> String {
 func anotherGreeting(for person: String) -> String {
     return "Hello, " + person + "!"
 }//return의 함수를 사용하여 암시적으로 반환값이 있는 함수
+
+//인수 레이블 생략
+func someFunction(_ firstParameterName: Int, secondParameterName: Int) {
+   
+}//매개변수에 대한 명시적 인수 레이블 대신 “_”을 사용가능
+
+//기본 매개변수 값
+func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
+    
+}//모든 매개변수의 값을 정의하지 않고 기본값을 정의하여 사용 가능
