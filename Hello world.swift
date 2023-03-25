@@ -400,3 +400,4 @@ func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) 
 }//모든 매개변수의 값을 정의하지 않고 기본값을 정의하여 사용 가능
 
 
+//
