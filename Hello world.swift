@@ -399,5 +399,13 @@ func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) 
     
 }//모든 매개변수의 값을 정의하지 않고 기본값을 정의하여 사용 가능
 
-
-//
+//가변 매개변수
+func arithmeticMean(_ numbers: Double...) -> Double {
+    var total: Double = 0
+    for number in numbers {
+        total += number
+    }
+    return total / Double(numbers.count)
+}
+//위 한수는 평균을 구하는 함수
+//매개변수가 여러개 일수있음으로 가변적으로 사용함
