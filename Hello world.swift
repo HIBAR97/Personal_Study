@@ -409,3 +409,10 @@ func arithmeticMean(_ numbers: Double...) -> Double {
 }
 //위 한수는 평균을 구하는 함수
 //매개변수가 여러개 일수있음으로 가변적으로 사용함
+
+//인-아웃 매개변수
+func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+} //인-아웃 매개변수에 인수로 전달할 때 변수 이름 바로 앞에 &를 추가해서 함수에서 수정가능
