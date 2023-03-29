@@ -416,3 +416,12 @@ func swapTwoInts(_ a: inout Int, _ b: inout Int) {
     a = b
     b = temporaryA
 } //인-아웃 매개변수에 인수로 전달할 때 변수 이름 바로 앞에 &를 추가해서 함수에서 수정가능
+
+//함수 유형
+func addTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a + b
+}
+func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a * b
+}
+//출력이 있는 함수
