@@ -425,3 +425,8 @@ func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
     return a * b
 }
 //출력이 있는 함수
+var mathFunction: (Int, Int) -> Int = addTwoInts
+print("Result: \(mathFunction(2, 3))")
+//다른 유형과 마찬가지로 상수나 변수에 함수를 할당할 때 함수 유형을 유추하도록 Swift에 맡길 수 있습니다
+let anotherMathFunction = addTwoInts
+	    
