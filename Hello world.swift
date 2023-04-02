@@ -430,3 +430,10 @@ print("Result: \(mathFunction(2, 3))")
 //다른 유형과 마찬가지로 상수나 변수에 함수를 할당할 때 함수 유형을 유추하도록 Swift에 맡길 수 있습니다
 let anotherMathFunction = addTwoInts
 	    
+//매개변수 유형으로서의 함수 유형
+func printMathResult(_ mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    print("Result: \(mathFunction(a, b))")
+}
+printMathResult(addTwoInts, 3, 5)
+
+//첫번째는 매개변수, 2-3번째는 유형어로된 입력
