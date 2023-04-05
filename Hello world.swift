@@ -438,4 +438,13 @@ printMathResult(addTwoInts, 3, 5)
 
 //첫번째는 매개변수, 2-3번째는 유형어로된 입력
 
+//반환 유형으로서의 함수 유형
+func stepForward(_ input: Int) -> Int {
+    return input + 1
+}
+func stepBackward(_ input: Int) -> Int {
+    return input - 1
+}
+//부울 매개변수를 기반으로 함수의 값을 반환함
+
 
