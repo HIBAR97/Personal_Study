@@ -464,3 +464,11 @@ print("zero!")
 
 //밖에서는 1개의 함수로 보이지만 안 속은 여러개의 함수로 이루어짐
 
+	    //Closures
+//간결하고 집중된 구문으로 인라인 클로저를 작성하는 방법
+func backward(_ s1: String, _ s2: String) -> Bool {
+    return s1 > s2
+}
+var reversedNames = names.sorted(by: backward)
+
+//일반적인 함수로 작성하고 이를 인수로 전달
