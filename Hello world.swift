@@ -472,3 +472,5 @@ func backward(_ s1: String, _ s2: String) -> Bool {
 var reversedNames = names.sorted(by: backward)
 
 //일반적인 함수로 작성하고 이를 인수로 전달
+
+	    
