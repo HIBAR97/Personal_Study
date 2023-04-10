@@ -473,5 +473,14 @@ var reversedNames = names.sorted(by: backward)
 
 //일반적인 함수로 작성하고 이를 인수로 전달
 
+//Closures 표현식
+//정렬된 방법
+//정렬 클로저의 출력을 기반으로 알려진 유형의 값 배열을 정렬하는 메서드를 제공한다
+let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+
+func backward(_ s1: String, _ s2: String) -> Bool {
+    return s1 > s2
+}
+var reversedNames = names.sorted(by: backward)
 	    
 
