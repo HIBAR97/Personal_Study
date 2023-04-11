@@ -483,4 +483,9 @@ func backward(_ s1: String, _ s2: String) -> Bool {
 }
 var reversedNames = names.sorted(by: backward)
 	    
+//Closures 표현식 구문
+{ (<#parameters#>) -> <#return type#> in
+   <#statements#>
+}
+//가변 매개변수는 가변 매개변수의 이름을 지정하면 사용할 수 있습니다. 튜플은 매개변수 유형 및 반환 유형으로도 사용할 수 있다.
 
