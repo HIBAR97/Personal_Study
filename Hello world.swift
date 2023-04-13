@@ -494,3 +494,4 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
     return s1 > s2
 })
 //반환 유형은 중괄호 외부가 아닌 내부에 작성
+
