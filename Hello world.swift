@@ -495,3 +495,6 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
 })
 //반환 유형은 중괄호 외부가 아닌 내부에 작성
 
+//클로저의 본문이 너무 짧기 때문에 한 줄에 작성 가능
+reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 > s2 } )
+//한 쌍의 괄호는 여전히 메서드에 대한 전체 인수를 래핑
