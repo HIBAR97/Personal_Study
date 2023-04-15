@@ -498,3 +498,7 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
 //클로저의 본문이 너무 짧기 때문에 한 줄에 작성 가능
 reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 > s2 } )
 //한 쌍의 괄호는 여전히 메서드에 대한 전체 인수를 래핑
+
+//컨텍스트에서 유형 유추
+//정렬 클로저가 메소드에 대한 인수로 전달되기 때문에 Swift는 매개변수의 유형과 리턴하는 값의 유형을 유추할 수 있다.
+reversedNames = names.sorted(by: { s1, s2 in return s1 > s2 } )
