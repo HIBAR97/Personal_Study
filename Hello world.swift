@@ -502,3 +502,8 @@ reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1
 //컨텍스트에서 유형 유추
 //정렬 클로저가 메소드에 대한 인수로 전달되기 때문에 Swift는 매개변수의 유형과 리턴하는 값의 유형을 유추할 수 있다.
 reversedNames = names.sorted(by: { s1, s2 in return s1 > s2 } )
+//모호성을 피하는경우 좋음
+
+//단일 표현식 클로저의 암시적 반환
+//선언에서 키워드를 생략하여 암시적 반환가능
+reversedNames = names.sorted(by: { s1, s2 in s1 > s2 } )
