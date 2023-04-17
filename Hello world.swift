@@ -507,3 +507,9 @@ reversedNames = names.sorted(by: { s1, s2 in return s1 > s2 } )
 //단일 표현식 클로저의 암시적 반환
 //선언에서 키워드를 생략하여 암시적 반환가능
 reversedNames = names.sorted(by: { s1, s2 in s1 > s2 } )
+
+//단축 인수 이름
+//클로저에 속기 인수 이름을 제공하며, 클로저의 인수 값을 참조하는데 사용할 수 있다.
+reversedNames = names.sorted(by: { $0 > $1 } )
+
+//함수는 인수가 모두 문자열인 클로저를 예상하기 때문에 속기 인수 및 는 모두 유형
