@@ -513,3 +513,7 @@ reversedNames = names.sorted(by: { s1, s2 in s1 > s2 } )
 reversedNames = names.sorted(by: { $0 > $1 } )
 
 //함수는 인수가 모두 문자열인 클로저를 예상하기 때문에 속기 인수 및 는 모두 유형
+reversedNames = names.sorted { $0 > $1 }
+// 충분히 길어 한 줄에 인라인으로 작성할 수 없을 때 가장 유용하다
+
+//가지포착
