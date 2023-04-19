@@ -516,4 +516,15 @@ reversedNames = names.sorted(by: { $0 > $1 } )
 reversedNames = names.sorted { $0 > $1 }
 // 충분히 길어 한 줄에 인라인으로 작성할 수 없을 때 가장 유용하다
 
-//가지포착
+//가치포착
+//클로저는 정의된 주변 컨텍스트에서 상수와 변수를 캡처 할 수 있다
+//중첩 함수를 포함하는 이라는 함수의 예
+func makeIncrementer(forIncrement amount: Int) -> () -> Int {
+    var runningTotal = 0
+    func incrementer() -> Int {
+        runningTotal += amount
+        return runningTotal
+    }
+    return incrementer
+}
+// 인수 레이블이 이고 매개변수 이름이 인 단일 매개변수가 있다
