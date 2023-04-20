@@ -528,3 +528,11 @@ func makeIncrementer(forIncrement amount: Int) -> () -> Int {
     return incrementer
 }
 // 인수 레이블이 이고 매개변수 이름이 인 단일 매개변수가 있다
+
+//함수는 실제 증분을 수행하는 라는 중첩 함수를 정의
+func incrementer() -> Int {
+    runningTotal += amount
+    return runningTotal
+}
+//함수 본문 내에서 참조
+//참조로 캡처하면 호출이 종료될 때 및 이 사라지지 않으며 다음에 함수가 호출
