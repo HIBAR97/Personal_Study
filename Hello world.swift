@@ -536,3 +536,12 @@ func incrementer() -> Int {
 }
 //함수 본문 내에서 참조
 //참조로 캡처하면 호출이 종료될 때 및 이 사라지지 않으며 다음에 함수가 호출
+let incrementByTen = makeIncrementer(forIncrement: 10)
+//변수 에 추가되는 증분 함수를 참조하기 위해 호출 되는 상수를 설정합니다 . 함수를 여러 번 호출하면 이 동작이 작동
+
+incrementByTen()
+// returns a value of 10
+incrementByTen()
+// returns a value of 20
+incrementByTen()
+// returns a value of 30
