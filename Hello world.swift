@@ -546,3 +546,8 @@ incrementByTen()
 incrementByTen()
 // returns a value of 30
 	    
+let incrementBySeven = makeIncrementer(forIncrement: 7)
+incrementBySeven()
+//다음에 의해 캡처된 변수에는 영향을 미치지 않음
+incrementByTen()
+
