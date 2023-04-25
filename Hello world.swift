@@ -551,3 +551,10 @@ incrementBySeven()
 //다음에 의해 캡처된 변수에는 영향을 미치지 않음
 incrementByTen()
 
+//클로저는 참조 유형
+//함수나 클로저를 상수나 변수에 할당할 때마다 실제로 해당 상수나 변수를 함수나 클로저에 대한 참조 로 설정
+let alsoIncrementByTen = incrementByTen
+alsoIncrementByTen()
+incrementByTen()
+
+// 둘 다 동일한 클로저를 참조하기 때문에 둘 다 증가하고 동일한 결과를 반환
