@@ -558,3 +558,12 @@ alsoIncrementByTen()
 incrementByTen()
 
 // 둘 다 동일한 클로저를 참조하기 때문에 둘 다 증가하고 동일한 결과를 반환
+
+//이스케이프 클로저
+//클로저는 함수에 대한 인수로 전달되지만 함수가 반환된 후에 호출될 때 함수를 이스케이프 함
+
+var completionHandlers: [() -> Void] = []
+func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+    completionHandlers.append(completionHandler)
+}
+//클로저가 탈출할 수 있는 한 가지 방법은 함수 외부에 정의된 변수에 저장
