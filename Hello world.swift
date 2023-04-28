@@ -567,3 +567,23 @@ func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
     completionHandlers.append(completionHandler)
 }
 //클로저가 탈출할 수 있는 한 가지 방법은 함수 외부에 정의된 변수에 저장
+
+//일반적으로 클로저는 변수를 클로저 본문에서 사용하여 암시적으로 변수를 캡처하지만 이 경우에는 명시적
+
+func someFunctionWithNonescapingClosure(closure: () -> Void) {
+    closure()
+}
+
+class SomeClass {
+    var x = 10
+    func doSomething() {
+        someFunctionWithEscapingClosure { self.x = 100 }
+        someFunctionWithNonescapingClosure { x = 200 }
+    }
+
+let instance = SomeClass()
+instance.doSomething()
+print(instance.x)
+
+completionHandlers.first?()
+print(instance.x)
