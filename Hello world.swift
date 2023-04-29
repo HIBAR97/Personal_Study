@@ -587,3 +587,13 @@ print(instance.x)
 
 completionHandlers.first?()
 print(instance.x)
+
+//암시적으로 참조하는 버전
+class SomeOtherClass {
+    var x = 10
+    func doSomething() {
+        someFunctionWithEscapingClosure { [self] in x = 100 }
+        someFunctionWithNonescapingClosure { x = 200 }
+    }
+}
+// self그러나 이스케이프 클로저는 when self이 구조체 또는 열거형의 인스턴스일 때 변경 가능한 참조를 캡처
