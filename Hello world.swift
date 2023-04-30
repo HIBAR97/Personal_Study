@@ -597,3 +597,13 @@ class SomeOtherClass {
     }
 }
 // self그러나 이스케이프 클로저는 when self이 구조체 또는 열거형의 인스턴스일 때 변경 가능한 참조를 캡처
+
+struct SomeStruct {
+    var x = 10
+    mutating func doSomething() {
+        someFunctionWithNonescapingClosure { x = 200 }  // Ok
+        someFunctionWithEscapingClosure { x = 100 }     // Error
+    }
+}
+//함수 에 대한 호출은 변경 메서드 내부에 있으므로 오류이므로 변경 가능
+//변경 가능한 참조를 캡처할 수 없다는 규칙을 위반
