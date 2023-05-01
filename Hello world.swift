@@ -607,3 +607,20 @@ struct SomeStruct {
 }
 //함수 에 대한 호출은 변경 메서드 내부에 있으므로 오류이므로 변경 가능
 //변경 가능한 참조를 캡처할 수 없다는 규칙을 위반
+
+//자동 폐쇄
+//자동 클로저 는 함수에 인수로 전달되는 표현식을 래핑하기 위해 자동으로 생성되는 클로저
+var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+print(customersInLine.count)
+// Prints "5"
+
+let customerProvider = { customersInLine.remove(at: 0) }
+print(customersInLine.count)
+// Prints "5"
+
+print("Now serving \(customerProvider())!")
+// Prints "Now serving Chris!"
+print(customersInLine.count)
+// Prints "4"
+
+// 일반적 이지만 그런 종류의 함수를 구현하는 것은 일반적이지 않음
