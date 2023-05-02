@@ -624,3 +624,13 @@ print(customersInLine.count)
 // Prints "4"
 
 // 일반적 이지만 그런 종류의 함수를 구현하는 것은 일반적이지 않음
+
+// customersInLine is ["Alex", "Ewa", "Barry", "Daniella"]
+func serve(customer customerProvider: () -> String) {
+    print("Now serving \(customerProvider())!")
+}
+serve(customer: { customersInLine.remove(at: 0) } )
+// Prints "Now serving Alex!"
+
+//동일한 작업을 수행하지만 명시적인 클로저를 사용하는 대신 매개변수의 유형을 속성으로 표시하여 자동 클로저를 사용
+
