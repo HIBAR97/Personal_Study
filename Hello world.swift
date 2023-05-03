@@ -634,3 +634,12 @@ serve(customer: { customersInLine.remove(at: 0) } )
 
 //동일한 작업을 수행하지만 명시적인 클로저를 사용하는 대신 매개변수의 유형을 속성으로 표시하여 자동 클로저를 사용
 
+// customersInLine is ["Ewa", "Barry", "Daniella"]
+func serve(customer customerProvider: @autoclosure () -> String) {
+    print("Now serving \(customerProvider())!")
+}
+serve(customer: customersInLine.remove(at: 0))
+// Prints "Now serving Ewa!"
+
+//자동 클로저를 과도하게 사용하면 코드를 이해하기 어려울 수 있다.
+//이스케이프가 허용되는 자동 폐쇄를 원하면 @autoclosure및 @escaping속성을 모두 사용
