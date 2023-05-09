@@ -644,3 +644,5 @@ serve(customer: customersInLine.remove(at: 0))
 //자동 클로저를 과도하게 사용하면 코드를 이해하기 어려울 수 있다.
 //이스케이프가 허용되는 자동 폐쇄를 원하면 @autoclosure및 @escaping속성을 모두 사용
 
+	
+	
