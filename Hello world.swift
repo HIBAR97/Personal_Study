@@ -643,3 +643,22 @@ serve(customer: customersInLine.remove(at: 0))
 
 //자동 클로저를 과도하게 사용하면 코드를 이해하기 어려울 수 있다.
 //이스케이프가 허용되는 자동 폐쇄를 원하면 @autoclosure및 @escaping속성을 모두 사용
+	
+// customersInLine is ["Barry", "Daniella"]
+var customerProviders: [() -> String] = []
+func collectCustomerProviders(_ customerProvider: @autoclosure @escaping () -> String) {
+    customerProviders.append(customerProvider)
+}
+collectCustomerProviders(customersInLine.remove(at: 0))
+collectCustomerProviders(customersInLine.remove(at: 0))
+
+print("Collected \(customerProviders.count) closures.")
+// Prints "Collected 2 closures."
+for customerProvider in customerProviders {
+    print("Now serving \(customerProvider())!")
+}
+// Prints "Now serving Barry!"
+// Prints "Now serving Daniella!"
+
+//함수는 인수 로 전달된 클로저를 호출하는 대신 클로저를 배열에 추가합니다. 배열은 함수 범위 밖에서 선언
+//겨롸적으로 인수 값이 함수 범위를 벗어날 수 있어야함
