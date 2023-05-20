@@ -663,5 +663,17 @@ for customerProvider in customerProviders {
 //함수는 인수 로 전달된 클로저를 호출하는 대신 클로저를 배열에 추가합니다. 배열은 함수 범위 밖에서 선언
 //겨롸적으로 인수 값이 함수 범위를 벗어날 수 있어야함
 
-	
+//열거형
+//enum하고 전체 정의를 한 쌍의 중괄호 안에 배치
+enum CompassPoint {
+	case north
+	case south
+	case east
+	case west
+}
+//혹은 한줄로 구분 가능
+enum Planet {
+	case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
+}	
+//새로운 열거형을 정의	
 	
