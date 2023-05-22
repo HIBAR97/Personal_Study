@@ -677,4 +677,9 @@ enum Planet {
 }	
 //새로운 열거형을 정의	
 	
-	
+//사용법
+var directionToHead = CompassPoint.west
+directionToHead = .east
+//으로 변경가능
+
+//열거형 값을 Switch 문과 일치시키기
