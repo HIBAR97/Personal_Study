@@ -683,3 +683,5 @@ directionToHead = .east
 //으로 변경가능
 
 //열거형 값을 Switch 문과 일치시키기
+
+	
