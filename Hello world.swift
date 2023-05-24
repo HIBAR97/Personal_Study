@@ -685,3 +685,4 @@ directionToHead = .east
 //열거형 값을 Switch 문과 일치시키기
 
 	
+	
