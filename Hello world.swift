@@ -684,5 +684,30 @@ directionToHead = .east
 
 //열거형 값을 Switch 문과 일치시키기
 
-	
+//개별 열거값을 Switch문으로 일치가능
+
+directionToHead = .south
+switch directionToHead {
+case .north:
+    print("Lots of planets have a north")
+case .south:
+    print("Watch out for penguins")
+case .east:
+    print("Where the sun rises")
+case .west:
+    print("Where the skies are blue")
+}
+// Prints "Watch out for penguins"
+
+//명시적으로 처리되지 않은 사례를 포함 Case문
+
+let somePlanet = Planet.earth
+switch somePlanet {
+case .earth:
+    print("Mostly harmless")
+default:
+    print("Not a safe place for humans")
+}
+
+//Default문 사용	
 	
