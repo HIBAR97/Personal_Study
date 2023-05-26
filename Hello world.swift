@@ -711,3 +711,16 @@ default:
 
 //Default문 사용	
 	
+//열거 사례 반복
+enum Beverage: CaseIterable {
+    case coffee, tea, juice
+}
+let numberOfChoices = Beverage.allCases.count
+print("\(numberOfChoices) beverages available")
+
+//같은 동작을 수행하지만 열거형으로 표현 가능
+
+for beverage in Beverage.allCases {
+    print(beverage)
+}
+// 프로토콜을 준수하는 열거형
