@@ -724,3 +724,15 @@ for beverage in Beverage.allCases {
     print(beverage)
 }
 // 프로토콜을 준수하는 열거형
+
+//관련 값
+
+enum Barcode {
+    case upc(Int, Int, Int, Int)
+    case qrCode(String)
+}
+
+var productBarcode = Barcode.upc(8, 85909, 51226, 3)
+
+//동일 제품 다양한 바코드 할당가능
+productBarcode = .qrCode("ABCDEFGHIJKLMNOP")
