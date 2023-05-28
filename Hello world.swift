@@ -736,3 +736,21 @@ var productBarcode = Barcode.upc(8, 85909, 51226, 3)
 
 //동일 제품 다양한 바코드 할당가능
 productBarcode = .qrCode("ABCDEFGHIJKLMNOP")
+
+	switch productBarcode {
+case .upc(let numberSystem, let manufacturer, let product, let check):
+    print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).")
+case .qrCode(let productCode):
+    print("QR code: \(productCode).")
+}
+
+//해당코드의 간결성을 위해 let를 사용가능
+
+switch productBarcode {
+case let .upc(numberSystem, manufacturer, product, check):
+    print("UPC : \(numberSystem), \(manufacturer), \(product), \(check).")
+case let .qrCode(productCode):
+    print("QR code: \(productCode).")
+}
+
+//원시 값
