@@ -754,3 +754,11 @@ case let .qrCode(productCode):
 }
 
 //원시 값
+enum ASCIIControlCharacter: Character {
+    case tab = "\t"
+    case lineFeed = "\n"
+    case carriageReturn = "\r"
+}
+
+//케릭터 형태나 문자열, 문자, 정수, 부동 소수점 등 여러가지를 사용할 수 있다.
+	
