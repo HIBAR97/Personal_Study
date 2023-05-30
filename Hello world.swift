@@ -762,3 +762,12 @@ enum ASCIIControlCharacter: Character {
 
 //케릭터 형태나 문자열, 문자, 정수, 부동 소수점 등 여러가지를 사용할 수 있다.
 	
+//암시적으로 할당된 원시 값
+//각 사례에 원시 겂을 명시적으로 할당할 피요는 없다.
+
+enum Planet: Int {
+    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
+}
+
+//문자열이 원시 값에 사용되는 경우 각 사례에 대한 암시적 값은 텍스트
+	
