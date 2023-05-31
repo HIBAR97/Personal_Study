@@ -769,5 +769,4 @@ enum Planet: Int {
     case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
 }
 
-//문자열이 원시 값에 사용되는 경우 각 사례에 대한 암시적 값은 텍스트
-	
+//문자열이 원시 값에 사용되는 경우 각 사례에 대한 암시적 값은 텍스트	
