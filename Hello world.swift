@@ -770,3 +770,19 @@ enum Planet: Int {
 }
 
 //문자열이 원시 값에 사용되는 경우 각 사례에 대한 암시적 값은 텍스트	
+
+	enum CompassPoint: String {
+    case north, south, east, west
+}
+
+//예를 들어 암시적인 결과
+//해당 속성을 사용하여 열거 사례의 원시 값에 접근
+
+let earthsOrder = Planet.earth.rawValue
+// earthsOrder is 3
+
+let sunsetDirection = CompassPoint.west.rawValue
+// sunsetDirection is "west"
+
+//원시 값에서 초기화
+	
