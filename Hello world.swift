@@ -786,3 +786,4 @@ let sunsetDirection = CompassPoint.west.rawValue
 
 //원시 값에서 초기화
 	
+	
