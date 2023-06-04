@@ -785,4 +785,25 @@ let sunsetDirection = CompassPoint.west.rawValue
 // sunsetDirection is "west"
 
 //원시 값에서 초기화
+// 이니셜라이저를 자동으로 수신하고 열거형 케이스 또는 를 반환
+let possiblePlanet = Planet(rawValue: 7)
+
+//원시값으로 천왕성을 식별
+
+let positionToFind = 11
+if let somePlanet = Planet(rawValue: positionToFind) {
+    switch somePlanet {
+    case .earth:
+        print("Mostly harmless")
+    default:
+        print("Not a safe place for humans")
+    }
+} else {
+    print("There isn't a planet at position \(positionToFind)")
+}
+// Prints "There isn't a planet at position 11"
+
+//선택적 바인딩을 사용
+
+//재귀 열겨형
 	
