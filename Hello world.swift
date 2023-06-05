@@ -807,3 +807,4 @@ if let somePlanet = Planet(rawValue: positionToFind) {
 
 //재귀 열겨형
 	
+	
