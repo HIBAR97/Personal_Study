@@ -806,5 +806,19 @@ if let somePlanet = Planet(rawValue: positionToFind) {
 //선택적 바인딩을 사용
 
 //재귀 열겨형
-	
+//재귀 열거형은 하나 이상의 열거 사례에 대한 연결된 값으로 열거형의 다른 인스턴스가 있는 열거형
+
+enum ArithmeticExpression {
+    case number(Int)
+    indirect case addition(ArithmeticExpression, ArithmeticExpression)
+    indirect case multiplication(ArithmeticExpression, ArithmeticExpression)
+}
+
+//indirect연관된 값이 있는 열거의 모든 사례에 대해 간접 참조를 활성화하기 위해 열거 시작 전에 작성
+
+indirect enum ArithmeticExpression {
+    case number(Int)
+    case addition(ArithmeticExpression, ArithmeticExpression)
+    case multiplication(ArithmeticExpression, ArithmeticExpression)
+}	
 	
