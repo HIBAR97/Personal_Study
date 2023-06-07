@@ -822,3 +822,12 @@ indirect enum ArithmeticExpression {
     case multiplication(ArithmeticExpression, ArithmeticExpression)
 }	
 	
+//산술 식을 저장
+//사용되는 열거형도 중첩을 지원해야 합니다. 즉, 열거형이 재귀적
+
+let five = ArithmeticExpression.number(5)
+let four = ArithmeticExpression.number(4)
+let sum = ArithmeticExpression.addition(five, four)
+let product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.number(2))
+
+//간단한 방법
