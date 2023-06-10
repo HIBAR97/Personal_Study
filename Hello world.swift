@@ -855,3 +855,24 @@ print(evaluate(product))
 * 기본 구현 이상으로 기능을 확장하도록 확장
 * 특정 종류의 표준 기능을 제공하기 위한 프로토콜 준수
 */
+
+//정의 구문
+struct SomeStructure {
+    // structure definition goes here
+}
+class SomeClass {
+    // class definition goes here
+}
+
+struct Resolution {
+    var width = 0
+    var height = 0
+}
+class VideoMode {
+    var resolution = Resolution()
+    var interlaced = false
+    var frameRate = 0.0
+    var name: String?
+}
+	
+	
