@@ -875,4 +875,10 @@ class VideoMode {
     var name: String?
 }
 	
-	
+//구조 및 클랫 인스턴스
+//그렇게 하려면 구조체 또는 클래스의 인스턴스를 만들어야 합니다
+
+let someResolution = Resolution()
+let someVideoMode = VideoMode()
+
+//가져오는거는 방법은 같음	
