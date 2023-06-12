@@ -882,3 +882,14 @@ let someResolution = Resolution()
 let someVideoMode = VideoMode()
 
 //가져오는거는 방법은 같음	
+
+	//속성 접근
+print("The width of someResolution is \(someResolution.width)")
+
+print("The width of someVideoMode is \(someVideoMode.resolution.width)")
+
+someVideoMode.resolution.width = 1280
+print("The width of someVideoMode is now \(someVideoMode.resolution.width)")
+
+//안속에 안속까지 연결가능
+	
