@@ -893,3 +893,9 @@ print("The width of someVideoMode is now \(someVideoMode.resolution.width)")
 
 //안속에 안속까지 연결가능
 	
+//구조체 유형에 대한 멤버별 초기화 프로그램
+let vga = Resolution(width: 640, height: 480)
+
+//구조체와 열거형 값 유형
+//값 유형은 변수 또는 상수에 할당되거나 함수에 전달될 때 값이 복사되는 유형
+	
