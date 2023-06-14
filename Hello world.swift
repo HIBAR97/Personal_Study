@@ -899,3 +899,11 @@ let vga = Resolution(width: 640, height: 480)
 //구조체와 열거형 값 유형
 //값 유형은 변수 또는 상수에 할당되거나 함수에 전달될 때 값이 복사되는 유형
 	
+let hd = Resolution(width: 1920, height: 1080)
+var cinema = hd
+
+//기존 인스턴스의 복사본이cinema 만들어지고 이 새 복사본이 에 할당
+
+cinema.width = 2048
+//덮어 쓰기 가능
+
