@@ -906,4 +906,11 @@ var cinema = hd
 
 cinema.width = 2048
 //덮어 쓰기 가능
+print("cinema is now \(cinema.width) pixels wide")
+// Prints "cinema is now 2048 pixels wide"
 
+print("hd is still \(hd.width) pixels wide")
+// Prints "hd is still 1920 pixels wide"
+
+//최종 결과는 동일한 숫자 값을 포함하는 완전히 별개의 두 인스턴스
+//열거형에도 동일한 동작
