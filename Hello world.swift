@@ -914,3 +914,21 @@ print("hd is still \(hd.width) pixels wide")
 
 //최종 결과는 동일한 숫자 값을 포함하는 완전히 별개의 두 인스턴스
 //열거형에도 동일한 동작
+
+	enum CompassPoint {
+    case north, south, east, west
+    mutating func turnNorth() {
+        self = .north
+    }
+}
+var currentDirection = CompassPoint.west
+let rememberedDirection = currentDirection
+currentDirection.turnNorth()
+
+
+print("The current direction is \(currentDirection)")
+print("The remembered direction is \(rememberedDirection)")
+// Prints "The current direction is north"
+// Prints "The remembered direction is west"
+
+//이후 값을 변경해 도 에 저장된 원래 값의 복사본에는 영향을 주지 않는다
