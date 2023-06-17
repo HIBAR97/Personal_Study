@@ -932,3 +932,15 @@ print("The remembered direction is \(rememberedDirection)")
 // Prints "The remembered direction is west"
 
 //이후 값을 변경해 도 에 저장된 원래 값의 복사본에는 영향을 주지 않는다
+
+	//클래스는 참조 유형
+
+let tenEighty = VideoMode()
+tenEighty.resolution = hd
+tenEighty.interlaced = true
+tenEighty.name = "1080i"
+tenEighty.frameRate = 25.0
+
+//다음으로 라는 새 상수에 할당되고 의 프레임 속도가 수정
+let alsoTenEighty = tenEighty
+alsoTenEighty.frameRate = 30.0
