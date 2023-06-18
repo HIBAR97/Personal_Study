@@ -944,3 +944,7 @@ tenEighty.frameRate = 25.0
 //다음으로 라는 새 상수에 할당되고 의 프레임 속도가 수정
 let alsoTenEighty = tenEighty
 alsoTenEighty.frameRate = 30.0
+//클래스는 참조 유형 이고 실제로 둘 다 동일한 인스턴스를 참조
+
+print("The frameRate property of tenEighty is now \(tenEighty.frameRate)")
+//어디에서 를 사용하든 를 사용하는 코드에 대해서도 생각해야 하며 그 반대의 경우도 마찬가지
