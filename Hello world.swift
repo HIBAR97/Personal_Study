@@ -948,3 +948,12 @@ alsoTenEighty.frameRate = 30.0
 
 print("The frameRate property of tenEighty is now \(tenEighty.frameRate)")
 //어디에서 를 사용하든 를 사용하는 코드에 대해서도 생각해야 하며 그 반대의 경우도 마찬가지
+
+	//ID 연산자
+//클래스는 참조 유형이기 때문에 여러 상수와 변수가 배후에서 클래스의 동일한 단일 인스턴스를 참조
+
+if tenEighty === alsoTenEighty {
+    print("tenEighty and alsoTenEighty refer to the same VideoMode instance.")
+}
+
+//고유한 사용자 지정 구조 및 클래스를 정의할 때 두 인스턴스가 동일한 것으로 간주되는 항목을 결정하는 것은 사용자의 책임
