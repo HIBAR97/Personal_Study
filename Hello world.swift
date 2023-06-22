@@ -959,4 +959,20 @@ if tenEighty === alsoTenEighty {
 //고유한 사용자 지정 구조 및 클래스를 정의할 때 두 인스턴스가 동일한 것으로 간주되는 항목을 결정하는 것은 사용자의 책임
 
 //포인터
-/일부 참조 유형의 인스턴스를 참조하는 Swift 상수 또는 변수는 C의 포인터와 유사하지만 메모리의 주소에 대한 직접 포인터가 아니며 별표( )를 작성하여 표시할 필요가 없다	
+//일부 참조 유형의 인스턴스를 참조하는 Swift 상수 또는 변수는 C의 포인터와 유사하지만 메모리의 주소에 대한 직접 포인터가 아니며 별표( )를 작성하여 표시할 필요가 없다	
+
+	//속성
+//속성은 값을 특정 클래스, 구조 또는 열거형과 연결합니다. 저장 속성은 상수 및 변수 값을 인스턴스의 일부로 저장
+
+//저장된 속성
+//특정 클래스 또는 구조의 인스턴스의 일부로 저장되는 상수 또는 변수
+//초기화 중에 저장된 속성의 초기 값을 설정하고 수정 가능
+
+struct FixedLengthRange {
+    var firstValue: Int
+    let length: Int
+}
+var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
+// the range represents integer values 0, 1, and 2
+rangeOfThreeItems.firstValue = 6
+// the range now represents integer values 6, 7, and 8
