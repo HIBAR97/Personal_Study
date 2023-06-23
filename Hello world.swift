@@ -976,3 +976,12 @@ var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
 // the range represents integer values 0, 1, and 2
 rangeOfThreeItems.firstValue = 6
 // the range now represents integer values 6, 7, and 8
+
+	//상수 구조 인스턴스의 저장된 속성
+let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
+// this range represents integer values 0, 1, 2, and 3
+rangeOfFourItems.firstValue = 6
+// this will report an error, even though firstValue is a variable property
+
+//변수 속성 이더라도 속성을 변경할 수 없다
+//값 형식의 인스턴스가 상수로 표시되면 모든 속성도 마찬가지
