@@ -985,3 +985,29 @@ rangeOfFourItems.firstValue = 6
 
 //변수 속성 이더라도 속성을 변경할 수 없다
 //값 형식의 인스턴스가 상수로 표시되면 모든 속성도 마찬가지
+
+	//Lazy Stored Properties
+//초기 값이 처음 사용될 때까지 계산되지 않는 속성
+//초기 값이 인스턴스의 초기화가 완료될 때까지 값을 알 수 없는 외부 요인에 따라 달라질 때 유용
+
+class DataImporter {
+    /*
+    DataImporter is a class to import data from an external file.
+    The class is assumed to take a nontrivial amount of time to initialize.
+    */
+    var filename = "data.txt"
+    // the DataImporter class would provide data importing functionality here
+}
+
+
+class DataManager {
+    lazy var importer = DataImporter()
+    var data: [String] = []
+    // the DataManager class would provide data management functionality here
+}
+
+
+let manager = DataManager()
+manager.data.append("Some data")
+manager.data.append("Some more data")
+// the DataImporter instance for the importer property hasn't yet been created
