@@ -1042,3 +1042,9 @@ let manager = DataManager()
 manager.data.append("Some data")
 manager.data.append("Some more data")
 // the DataImporter instance for the importer property hasn't yet been created
+
+	//Point점의 x 좌표와 y 좌표를 캡슐화합니다.
+//Sizea width및 a 를 캡슐화합니다 height.
+//Rect원점과 크기로 사각형을 정의합니다.
+
+//속기 세터 선언
