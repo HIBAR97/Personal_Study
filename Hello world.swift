@@ -1048,3 +1048,21 @@ manager.data.append("Some more data")
 //Rect원점과 크기로 사각형을 정의합니다.
 
 //속기 세터 선언
+struct AlternativeRect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.height / 2)
+            return Point(x: centerX, y: centerY)
+        }
+        set {
+            origin.x = newValue.x - (size.width / 2)
+            origin.y = newValue.y - (size.height / 2)
+        }
+    }
+}
+
+//속기 Getter 선언
+	
