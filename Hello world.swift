@@ -1065,4 +1065,21 @@ struct AlternativeRect {
 }
 
 //속기 Getter 선언
+struct CompactRect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            Point(x: origin.x + (size.width / 2),
+                  y: origin.y + (size.height / 2))
+        }
+        set {
+            origin.x = newValue.x - (size.width / 2)
+            origin.y = newValue.y - (size.height / 2)
+        }
+    }
+}
+//returnGetter에서 생략하는 것은 함수에서 생략하는 것과 동일한 규칙 을 return따른다
+
+//읽기 전용 계산 속성
 	
