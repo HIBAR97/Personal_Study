@@ -1082,4 +1082,15 @@ struct CompactRect {
 //returnGetter에서 생략하는 것은 함수에서 생략하는 것과 동일한 규칙 을 return따른다
 
 //읽기 전용 계산 속성
+//게터는 있지만 세터는 없는 계산 속성을 읽기 전용 계산 속성이다.
+struct Cuboid {
+    var width = 0.0, height = 0.0, depth = 0.0
+    var volume: Double {
+        return width * height * depth
+    }
+}
+let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
+
+//이 구조 에는 직육면체의 현재 부피를 계산하고 반환하는 라는 읽기 전용 계산 속성도 있다.
 	
