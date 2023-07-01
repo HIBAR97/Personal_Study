@@ -1120,3 +1120,16 @@ stepCounter.totalSteps = 896
 // About to set totalSteps to 896
 // Added 536 steps
 	
+//속성 래퍼
+
+//속성 래퍼를 사용하는 경우 래퍼를 정의할 때 관리 코드를 한 번 작성하고 여러 속성에 적용하여 해당 관리 코드를 재사용
+//속성을 정의하는 구조, 열거형 또는 클래스를 만듦
+
+@propertyWrapper
+struct TwelveOrLess {
+    private var number = 0
+    var wrappedValue: Int {
+        get { return number }
+        set { number = min(newValue, 12) }
+    }
+}
