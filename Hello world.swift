@@ -1133,3 +1133,20 @@ struct TwelveOrLess {
         set { number = min(newValue, 12) }
     }
 }
+//래퍼를 속성에 적용하면 컴파일러는 래퍼에 저장소를 제공하는 코드와 래퍼를 통해 속성에 대한 액세스를 제공하는 코드를 합성
+
+struct SmallRectangle {
+    private var _height = TwelveOrLess()
+    private var _width = TwelveOrLess()
+    var height: Int {
+        get { return _height.wrappedValue }
+        set { _height.wrappedValue = newValue }
+    }
+    var width: Int {
+        get { return _width.wrappedValue }
+        set { _width.wrappedValue = newValue }
+    }
+}
+
+//속성에 대한 getter 및 setter 및 래핑 액세스
+	
