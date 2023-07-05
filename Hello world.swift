@@ -1178,3 +1178,14 @@ struct SmallNumber {
 }
 
 //래핑된 속성에 대해 다른 초기 값을 지정할 수 없습니다
+struct ZeroRectangle {
+    @SmallNumber var height: Int
+    @SmallNumber var width: Int
+}
+
+
+var zeroRectangle = ZeroRectangle()
+print(zeroRectangle.height, zeroRectangle.width)
+// Prints "0 0"
+
+//해당 랩 의 인스턴스는 를 호출 하여 생성
