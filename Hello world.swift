@@ -1185,6 +1185,17 @@ struct ZeroRectangle {
 
 
 var zeroRectangle = ZeroRectangle()
+//래퍼를 속성에 적용하고 초기 값을 지정하지 않으면 Swift는 init()이니셜라이저를 사용하여 래퍼를 설정
+
+struct ZeroRectangle {
+    @SmallNumber var height: Int
+    @SmallNumber var width: Int
+}
+
+
+var zeroRectangle = ZeroRectangle()
+print(zeroRectangle.height, zeroRectangle.width)
+	
 print(zeroRectangle.height, zeroRectangle.width)
 // Prints "0 0"
 
