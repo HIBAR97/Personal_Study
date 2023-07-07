@@ -1200,3 +1200,21 @@ print(zeroRectangle.height, zeroRectangle.width)
 // Prints "0 0"
 
 //해당 랩 의 인스턴스는 를 호출 하여 생성
+//이는 이니셜라이저에 대한 호출로 변환
+//이니셜라이저는 여기에 지정된 래핑된 값을 사용하며 기본 최대값인 12를 사용
+
+struct NarrowRectangle {
+    @SmallNumber(wrappedValue: 2, maximum: 5) var height: Int
+    @SmallNumber(wrappedValue: 3, maximum: 4) var width: Int
+}
+
+
+var narrowRectangle = NarrowRectangle()
+print(narrowRectangle.height, narrowRectangle.width)
+// Prints "2 3"
+
+
+narrowRectangle.height = 100
+narrowRectangle.width = 100
+print(narrowRectangle.height, narrowRectangle.width)
+	
