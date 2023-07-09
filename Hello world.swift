@@ -1217,4 +1217,19 @@ print(narrowRectangle.height, narrowRectangle.width)
 narrowRectangle.height = 100
 narrowRectangle.width = 100
 print(narrowRectangle.height, narrowRectangle.width)
-	
+//속성 래퍼에 대한 인수를 포함하면 래퍼에서 초기 상태를 설정하거나 생성 시 래퍼에 다른 옵션을 전달할 수 있습니다. 이 구문은 속성 래퍼를 사용하는 가장 일반적인 방법
+
+struct MixedRectangle {
+    @SmallNumber var height: Int = 1
+    @SmallNumber(maximum: 9) var width: Int = 2
+}
+
+
+var mixedRectangle = MixedRectangle()
+print(mixedRectangle.height)
+// Prints "1"
+
+
+mixedRectangle.height = 20
+print(mixedRectangle.height)
+//랩핑 의 인스턴스는 기본 최대값인 12를 사용하는 를 호출하여 생성됩니다 . 랩핑 인스턴스는 를 호출하여 생성	
