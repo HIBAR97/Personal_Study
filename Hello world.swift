@@ -1233,3 +1233,45 @@ print(mixedRectangle.height)
 mixedRectangle.height = 20
 print(mixedRectangle.height)
 //랩핑 의 인스턴스는 기본 최대값인 12를 사용하는 를 호출하여 생성됩니다 . 랩핑 인스턴스는 를 호출하여 생성	
+
+	//속성 래퍼에서 값 프로젝션
+//예상 값의 이름은 달러 기호( )로 시작한다는 점을 제외하면 래핑된 값과 동일
+
+@propertyWrapper
+struct SmallNumber {
+    private var number: Int
+    private(set) var projectedValue: Bool
+
+
+    var wrappedValue: Int {
+        get { return number }
+        set {
+            if newValue > 12 {
+                number = 12
+                projectedValue = true
+            } else {
+                number = newValue
+                projectedValue = false
+            }
+        }
+    }
+
+
+    init() {
+        self.number = 0
+        self.projectedValue = false
+    }
+}
+struct SomeStructure {
+    @SmallNumber var someNumber: Int
+}
+var someStructure = SomeStructure()
+
+
+someStructure.someNumber = 4
+print(someStructure.$someNumber)
+// Prints "false"
+
+
+someStructure.someNumber = 55
+print(someStructure.$someNumber)
