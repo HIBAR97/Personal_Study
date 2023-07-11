@@ -40,6 +40,32 @@ for character in "Dog"{
     //g
 }
 
+//쓰기는 래퍼의 예상 값에 액세스
+//인스턴스 메서드와 같은 유형의 일부인 코드에서 프로젝션된 값에 액세스할 때 다른 속성에 액세스하는 것처럼 속성 이름 앞에 생략
+
+enum Size {
+    case small, large
+}
+
+
+struct SizedRectangle {
+    @SmallNumber var height: Int
+    @SmallNumber var width: Int
+
+
+    mutating func resize(to size: Size) -> Bool {
+        switch size {
+        case .small:
+            height = 10
+            width = 20
+        case .large:
+            height = 100
+            width = 100
+        }
+        return $height || $width
+    }
+
+
 //문자열 값 개수를 검색 가능
 let unusualArr = "Koala, Snail, Penguin"
 print("unusual has \(unusualArr.count) characters")
