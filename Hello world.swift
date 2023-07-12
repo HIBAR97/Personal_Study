@@ -1301,3 +1301,20 @@ print(someStructure.$someNumber)
 
 someStructure.someNumber = 55
 print(someStructure.$someNumber)
+//속성 래퍼 구문은 getter 및 setter가 있는 속성의 구문 설탕일 뿐이므로 다른 속성에 액세스하는 것과 동일하게 액세스 height하고 동작
+
+//글로벌 및 로컬 변수
+//속성 계산 및 관찰에 대해 위에서 설명한 기능은 전역 변수 및 지역 변수 에도 사용
+
+func someFunction() {
+    @SmallNumber var myNumber: Int = 0
+
+
+    myNumber = 10
+    // now myNumber is 10
+
+
+    myNumber = 24
+    // now myNumber is 12
+}
+	
