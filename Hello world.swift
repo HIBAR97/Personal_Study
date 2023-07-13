@@ -1318,3 +1318,29 @@ func someFunction() {
     // now myNumber is 12
 }
 	
+//유형 속성
+//생성하는 해당 유형의 인스턴스 수에 관계없이 이러한 속성의 복사본은 하나만 존재
+
+//유형 속성 구문
+struct SomeStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+enum SomeEnumeration {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 6
+    }
+}
+class SomeClass {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 27
+    }
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+}
+	
