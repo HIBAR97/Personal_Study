@@ -1342,5 +1342,19 @@ class SomeClass {
     class var overrideableComputedTypeProperty: Int {
         return 107
     }
+
+//유형 속성 쿼리 및 설정
+
+print(SomeStructure.storedTypeProperty)
+// Prints "Some value."
+SomeStructure.storedTypeProperty = "Another value."
+print(SomeStructure.storedTypeProperty)
+// Prints "Another value."
+print(SomeEnumeration.computedTypeProperty)
+// Prints "6"
+print(SomeClass.computedTypeProperty)
+// Prints "27"
+
+//제에서는 여러 오디오 채널에 대한 오디오 레벨 미터를 모델링하는 구조의 일부로 두 개의 저장된 유형 속성을 사용
 }
 	
