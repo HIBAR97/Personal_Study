@@ -1358,3 +1358,20 @@ print(SomeClass.computedTypeProperty)
 //제에서는 여러 오디오 채널에 대한 오디오 레벨 미터를 모델링하는 구조의 일부로 두 개의 저장된 유형 속성을 사용
 }
 	
+struct AudioChannel {
+    static let thresholdLevel = 10
+    static var maxInputLevelForAllChannels = 0
+    var currentLevel: Int = 0 {
+        didSet {
+            if currentLevel > AudioChannel.thresholdLevel {
+                // cap the new audio level to the threshold level
+                currentLevel = AudioChannel.thresholdLevel
+            }
+            if currentLevel > AudioChannel.maxInputLevelForAllChannels {
+                // store this as the new overall maximum input level
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+            }
+        }
+    }
+}
+//구조 는 해당 기능을 지원하기 위해 두 개의 저장된 유형 속성을 정의합니다. 첫 번째는 오디오 레벨이 취할 수 있는 최대 임계값을 정의
