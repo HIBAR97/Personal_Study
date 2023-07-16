@@ -1375,3 +1375,13 @@ struct AudioChannel {
     }
 }
 //구조 는 해당 기능을 지원하기 위해 두 개의 저장된 유형 속성을 정의합니다. 첫 번째는 오디오 레벨이 취할 수 있는 최대 임계값을 정의
+
+//두 개의 새 오디오 채널을 생성하여 스테레오 사운드 시스템의 오디오 레벨을 나타낼 수 있다
+var leftChannel = AudioChannel()
+var rightChannel = AudioChannel()
+
+leftChannel.currentLevel = 7
+print(leftChannel.currentLevel)
+// Prints "7"
+print(AudioChannel.maxInputLevelForAllChannels)
+// Prints "7"
