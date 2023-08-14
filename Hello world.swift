@@ -1386,3 +1386,10 @@ print(leftChannel.currentLevel)
 print(AudioChannel.maxInputLevelForAllChannels)
 // Prints "7"
 	
+//오른쪽 채널 의 를 로 설정하려고 하면 오른쪽 채널의 속성이 의 최대값으로 제한되고 type 속성이 equal 로 업데이트되는 것을 볼 수 있다
+rightChannel.currentLevel = 11
+print(rightChannel.currentLevel)
+// Prints "10"
+print(AudioChannel.maxInputLevelForAllChannels)
+// Prints "10"
+	
