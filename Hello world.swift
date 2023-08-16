@@ -1393,3 +1393,8 @@ print(rightChannel.currentLevel)
 print(AudioChannel.maxInputLevelForAllChannels)
 // Prints "10"
 	
+//문자열과 문자
+//Swift의 String및 Character유형은 코드의 텍스트 작업을 위한 빠르고 유니코드 호환 방법을 제공합니다. 문자열 생성 및 조작을 위한 구문은 C와 유사한 문자열 리터럴 구문을 사용하여 가볍고 읽기 쉽다
+
+//문자열 리터럴
+let someString = "Some string literal value"	
