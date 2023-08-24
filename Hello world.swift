@@ -1399,4 +1399,18 @@ print(AudioChannel.maxInputLevelForAllChannels)
 //문자열 리터럴
 let someString = "Some string literal value"	
 
-	
+//행동양식
+//인스턴스 메소드
+
+	class Counter {
+    var count = 0
+    func increment() {
+        count += 1
+    }
+    func increment(by amount: Int) {
+        count += amount
+    }
+    func reset() {
+        count = 0
+    }
+}
