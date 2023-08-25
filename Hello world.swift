@@ -1414,3 +1414,16 @@ let someString = "Some string literal value"
         count = 0
     }
 }
+//클래스 는 현재 카운터 값을 추적하기 위해 Counter변수 속성을 선언합니다 .count 속성과 동일한 점 구문을 사용하여 인스턴스 메서드를 호출
+
+	let counter = Counter()
+// the initial counter value is 0
+counter.increment()
+// the counter's value is now 1
+counter.increment(by: 5)
+// the counter's value is now 6
+counter.reset()
+// the counter's value is now 0
+
+//함수 매개변수에는 함수 인수 레이블 및 매개변수 이름 에 설명된 대로 이름(함수 본문 내에서 사용)과 인수 레이블(함수 호출 시 사용)이 모두 있을 수 있다.
+	
