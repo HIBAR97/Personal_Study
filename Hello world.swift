@@ -1433,4 +1433,3 @@ counter.reset()
 func increment() {
     self.count += 1
 }
-	
