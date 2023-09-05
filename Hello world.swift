@@ -1433,3 +1433,17 @@ counter.reset()
 func increment() {
     self.count += 1
 }
+//명시적으로 작성하지 않으면 selfSwift는 메소드 내에서 알려진 속성 또는 메소드 이름을 사용할 때마다 현재 인스턴스의 속성 또는 메소드를 참조하고 있다고 가정
+//인스턴스의 속성과 동일한 이름을 가질 때 발생
+
+struct Point {
+    var x = 0.0, y = 0.0
+    func isToTheRightOf(x: Double) -> Bool {
+        return self.x > x
+    }
+}
+let somePoint = Point(x: 4.0, y: 5.0)
+if somePoint.isToTheRightOf(x: 1.0) {
+    print("This point is to the right of the line where x == 1.0")
+}
+	
