@@ -1446,5 +1446,21 @@ let somePoint = Point(x: 4.0, y: 5.0)
 if somePoint.isToTheRightOf(x: 1.0) {
     print("This point is to the right of the line where x == 1.0")
 }
-	
+
+//인스턴스 메소드 내에서 값 유형 수정
+struct Point {
+    var x = 0.0, y = 0.0
+    mutating func moveBy(x deltaX: Double, y deltaY: Double) {
+        x += deltaX
+        y += deltaY
+    }
+}
+var somePoint = Point(x: 1.0, y: 1.0)
+somePoint.moveBy(x: 2.0, y: 3.0)
+print("The point is now at (\(somePoint.x), \(somePoint.y))")
+
+// 특정 메서드 내에서 구조체 또는 열거형의 속성을 수정해야 하는 경우 해당 메서드에 대한 동작 변경 을 선택
+let fixedPoint = Point(x: 3.0, y: 3.0)
+fixedPoint.moveBy(x: 2.0, y: 3.0)
+
 	
