@@ -1462,5 +1462,4 @@ print("The point is now at (\(somePoint.x), \(somePoint.y))")
 // 특정 메서드 내에서 구조체 또는 열거형의 속성을 수정해야 하는 경우 해당 메서드에 대한 동작 변경 을 선택
 let fixedPoint = Point(x: 3.0, y: 3.0)
 fixedPoint.moveBy(x: 2.0, y: 3.0)
-
 	
