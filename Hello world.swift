@@ -1462,4 +1462,33 @@ print("The point is now at (\(somePoint.x), \(somePoint.y))")
 // 특정 메서드 내에서 구조체 또는 열거형의 속성을 수정해야 하는 경우 해당 메서드에 대한 동작 변경 을 선택
 let fixedPoint = Point(x: 3.0, y: 3.0)
 fixedPoint.moveBy(x: 2.0, y: 3.0)
-	
+
+//Mutating 메서드 내에서 자신에게 할당
+struct Point {
+    var x = 0.0, y = 0.0
+    mutating func moveBy(x deltaX: Double, y deltaY: Double) {
+        self = Point(x: x + deltaX, y: y + deltaY)
+    }
+}
+//이 대체 버전의 메서드를 호출하는 최종 결과는 이전 버전을 호출하는 경우와 정확히 동일
+
+enum TriStateSwitch {
+    case off, low, high
+    mutating func next() {
+        switch self {
+        case .off:
+            self = .low
+        case .low:
+            self = .high
+        case .high:
+            self = .off
+        }
+    }
+}
+var ovenLight = TriStateSwitch.low
+ovenLight.next()
+// ovenLight is now equal to .high
+ovenLight.next()
+// ovenLight is now equal to .off
+
+
