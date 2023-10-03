@@ -1491,3 +1491,15 @@ ovenLight.next()
 ovenLight.next()
 // ovenLight is now equal to .off
 
+//유형 방법
+//해당 유형의 인스턴스가 아닌 유형에 대해 유형 메소드를 호출
+
+
+class SomeClass {
+    class func someTypeMethod() {
+        // type method implementation goes here
+    }
+}
+SomeClass.someTypeMethod()
+
+	
