@@ -1501,4 +1501,4 @@ class SomeClass {
     }
 }
 SomeClass.someTypeMethod()
-	
+
